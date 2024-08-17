@@ -2,7 +2,7 @@ import React from 'react';
 import { colors, widths } from '../styles';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
-import logo from '../assets/space_cat_logo.png';
+import logo from '../assets/space_cat_logo.png'
 
 /**
  * Header renders the top navigation

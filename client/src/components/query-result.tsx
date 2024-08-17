@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import styled from '@emotion/styled';
 import { LoadingSpinner } from '@apollo/space-kit/Loaders/LoadingSpinner';
 
@@ -6,7 +6,14 @@ import { LoadingSpinner } from '@apollo/space-kit/Loaders/LoadingSpinner';
  * Query Results conditionally renders Apollo useQuery hooks states:
  * loading, error or its children when data is ready
  */
-const QueryResult = ({ loading, error, data, children }) => {
+
+interface QueryResultInterface{
+  loading?: boolean
+  error?: any
+  data?: any
+  children?: ReactElement
+}
+const QueryResult = ({ loading, error, data, children }: QueryResultInterface) => {
   if (error) {
     return <p>ERROR: {error.message}</p>;
   }

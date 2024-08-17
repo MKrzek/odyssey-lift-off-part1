@@ -99,8 +99,8 @@ const ModuleNavStyledLink = styled(Link)({
 });
 
 const ModuleListItemContent = styled.div((props) => ({
-  backgroundColor: props.isActive ? colors.black.base : colors.black.light,
-  color: props.isActive ? colors.silver.lighter : colors.silver.darker,
+  backgroundColor: props?.isActive ? colors.black.base : colors.black.light,
+  color: props?.isActive ? colors.silver.lighter : colors.silver.darker,
   minHeight: 80,
   padding: '10px 20px',
   display: 'flex',
